@@ -13,15 +13,18 @@
 
 2. 在你的项目中，运行：
 ```sh
-# 构建
-vuepress build docs
+# 1 构建 在项目根目录执行
+vuepress build
 
-# 导航到构建输出目录
-cd docs/.vuepress/dist
 
+# 2.1将构建好的目录/.vuepress/dist 移动到项目根目录
+# 2.2并改名为docs(github Page页面关联的文件夹只能叫 docs)
+
+# 3 push 到git
 git init
 git add -A
 git commit -m 'deploy'
+git branch -M main
 
 # 推到你仓库的的 gh-page 分支
 # 将 <USERNAME>/<REPO> 替换为你的信息
